@@ -27,9 +27,13 @@ createKeys = () => {
     ];
     
     alphabet.slice(0, 10).forEach((letter) => {
-        let key = document.createElement("button");
+        let key = document.createElement("div");
+        let keyLetter = document.createElement("p");
         key.className = "key";
-        document.getElementById("first-row").appendChild(key).textContent = letter;
+        keyLetter.className = "key-letter";
+        // document.getElementById("first-row").appendChild(key).textContent = letter;
+        document.getElementById("first-row").appendChild(key);
+        key.appendChild(keyLetter).textContent = letter;
         key.addEventListener("click", () => {
             let lettersGuessed = key.textContent.toLowerCase();
             checkLetters(lettersGuessed);
@@ -39,8 +43,12 @@ createKeys = () => {
 
     alphabet.slice(10, 19).forEach((letter) => {
         let key = document.createElement("button");
+        let keyLetter = document.createElement("p");
         key.className = "key";
-        document.getElementById("second-row").appendChild(key).textContent = letter;
+        keyLetter.className = "key-letter";
+        // document.getElementById("second-row").appendChild(key).textContent = letter;
+        document.getElementById("second-row").appendChild(key);
+        key.appendChild(keyLetter).textContent = letter;
         key.addEventListener("click", () => {
             let lettersGuessed = key.textContent.toLowerCase();
             checkLetters(lettersGuessed);
@@ -50,8 +58,12 @@ createKeys = () => {
 
     alphabet.slice(19, 26).forEach((letter) => {
         let key = document.createElement("button");
+        let keyLetter = document.createElement("p");
         key.className = "key";
-        document.getElementById("third-row").appendChild(key).textContent = letter;
+        keyLetter.className = "key-letter";
+        // document.getElementById("third-row").appendChild(key).textContent = letter;
+        document.getElementById("third-row").appendChild(key);
+        key.appendChild(keyLetter).textContent = letter;
         key.addEventListener("click", () => {
             let lettersGuessed = key.textContent.toLowerCase();
             checkLetters(lettersGuessed);

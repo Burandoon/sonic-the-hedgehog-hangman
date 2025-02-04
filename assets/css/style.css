@@ -4,7 +4,6 @@
 }
 
 /* CSS Styling */
-
 * {
     margin: 0;
     padding: 0;
@@ -26,7 +25,7 @@ body {
     width: 100%;
     height: auto;
     height: auto;
-    margin: 75px auto 0;
+    margin: 50px auto;
     text-align: center;
     overflow: hidden;
 }
@@ -36,7 +35,7 @@ header {
     margin-bottom: 30px;
     text-align: center;
     color: var(--main-txt-color);
-    font-size: 18px;
+    font-size: 14px;
     text-transform: uppercase;
 }
 
@@ -53,19 +52,8 @@ header {
 
 #underscores {
     letter-spacing: 10px;
-    margin: 40px 0;
+    margin: auto;
     text-transform: uppercase;
-}
-
-.key {
-    background: var(--main-txt-color);
-    color: #fff;
-    text-align: center;
-    width: 35px;
-    height: 35px;
-    border: none;
-    border-radius: 20%;
-    margin: 7px;
 }
 
 #keys {
@@ -75,7 +63,36 @@ header {
 #first-row,
 #second-row,
 #third-row {
+    display: flex;
+    justify-content: center;
     margin-bottom: 7px;
+}
+
+.key {
+    background: var(--main-txt-color);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    padding: 3px;
+    text-align: center;
+    border: none;
+    border-radius: 20%;
+    margin: 7px;
+}
+
+.key:hover {
+    cursor: pointer;
+}
+
+.key-letter {
+    font-size: 10px;
+}
+
+.key-letter:hover {
+    cursor: inherit; 
 }
 
 .game-stats > span {
@@ -86,7 +103,6 @@ header {
 #wrong-guesses {
     text-transform: uppercase;
 }
-
 
 /* Modal */
 #modal {
@@ -107,7 +123,8 @@ header {
     margin: auto;
     padding: 50px;
     border: solid 1px var(--main-txt-color);
-    width: 50%;
+    max-width: 85%;
+    width: 100%;
 }
 
 .modal-text {
@@ -128,31 +145,23 @@ header {
     margin: 5px 15px;
 }
 
-img {
-    width: 25px;
-    height: 25px;
-    display: inline-block;
-}
-
-
 /*MEDIA QUERIES*/
-@media only screen and (max-width: 600px) {
-    .wrapper {
-        width: 325px;
-        font-size: 16px;
-    }
-
+@media only screen and (min-width: 768px) {
     header {
-        font-size: 14px;
-    }
-
-    #underscore {
-        margin: auto;
+        font-size: 18px;
     }
 
     .key {
-        width: 20px;
-        height: 20px;
-        padding: 3px;
+        width: 35px;
+        height: 35px;
+        /* font-size: 13px; */
+    }
+
+    .key-letter {
+        font-size: 13px;
+    }
+
+    #underscores {
+        margin: 40px 0;
     }
 }
