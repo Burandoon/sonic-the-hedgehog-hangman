@@ -17,9 +17,9 @@
             <header>
                 <h1>Hangman:<br>Sonic The Hedgehog Edition</h1>
             </header>
-            <div class="sonic-image">
-                <img src="assets/images/sonicrunning2.gif" />
-            </div>
+            
+            <img class="sonic-running" src="assets/images/sonicrunning2.gif" alt="Gif animation of Sonic the Hedgehog running."/>
+            
             <div>
                 <span class="instructions">Press Or Click Any Key To Get Started!</span>
                 <span class="current-word-text">Current Word:</span>
@@ -38,7 +38,9 @@
             </div>
             <div id="modal">
                 <div class="modal-content">
-                    <span id="modal-text" class="modal-text"></span>
+                    <p id="modal-text" class="modal-text"></p>
+                    <img id="modal-image-win" class="modal-result-image--win modal-result-image" src="assets/images/hyper-sonic.gif" />
+                    <img id="modal-image-lose" class="modal-result-image--lose modal-result-image" src="assets/images/sonic-walking.gif" />
                     <div class="buttons">
                         <button class="play-again" id="yes">Yes</button>
                         <button class="play-again" id="no">No</button>

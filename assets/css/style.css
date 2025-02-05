@@ -32,17 +32,20 @@ body {
 
 header {
     font-family: 'Stalinist One', cursive;
-    margin-bottom: 30px;
     text-align: center;
     color: var(--main-txt-color);
     font-size: 14px;
     text-transform: uppercase;
 }
 
-.sonic-image img {
-    width: 100px;
+.sonic-running {
     height: 100px;
-    margin-bottom: 10px;
+    width: 100px;
+    margin: 25px auto;
+}
+
+.sonic-running {
+    display: inline-block;
 }
 
 .current-word-text {
@@ -129,20 +132,41 @@ header {
 
 .modal-text {
     color: #fff;
+    line-height: 1.8;
 }
 
-.buttons {
-    margin-top: 50px;
+.modal-result-image {
+    display: none;
+    margin: 25px auto;
+}
+
+.modal-result-image--win {
+    height: 125px;
+    width: 125px;
+}
+
+.modal-result-image--lose {
+    height: 100px;
+    width: 100px;
 }
 
 .play-again {
+    background-color: transparent;
+    border: solid 2px #fff;
+    border-radius: 10px;
+    font-weight: 700;
     text-align: center;
     width: 70px;
     height: 40px;
-    color: black;
-    border: none;
-    border-radius: none;
+    color: #fff;
     margin: 5px 15px;
+    transition: all 0.2s ease-in-out;
+}
+
+.play-again:hover {
+    cursor: pointer;
+    background-color: #fff;
+    color: var(--main-txt-color);
 }
 
 /*MEDIA QUERIES*/
@@ -151,10 +175,14 @@ header {
         font-size: 18px;
     }
 
+    .sonic-running {
+        height: 125px;
+        width: 125px;
+    }
+
     .key {
         width: 35px;
         height: 35px;
-        /* font-size: 13px; */
     }
 
     .key-letter {
